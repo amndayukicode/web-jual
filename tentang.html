@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}        
+.FContainer{
+display: flex;
+width: 100%;
+height: 20x;
+background-color : rgb(255, 255, 255);
+
+}
+.shop{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+height: 50px;
+font-size: 20px;
+color: #000;
+padding: 15px;
+background-color: antiquewhite;
+}
+.list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 15px;
+}
+.list li{
+padding: 15px;
+}
+.list li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: large;
+    padding: 10px;
+}
+.list li a:hover {
+    background-color: #ffffff;
+    color: rgb(107, 107, 121);
+    transform: all .2s ease-in-out;
+  }
+  .FContainer .search{
+    margin: 10px;
+  
+    
+    
+}
+
+.FContainer .search input[type="text"] {
+    padding: 8px 100px;
+    border: black 1px solid;
+    border-radius: 1px;
+    
+}
+
+#search{
+    padding: 5px 10px;
+    background-color: #363636; 
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+h3{
+    text-align: center;
+}
+h5{
+    text-align: center;
+    font-size: 25px;
+}
+footer {
+  background-color: #ffffff;
+  padding: 10px;
+  font-size: 1,2rem;
+  text-align: center;
+  margin-top: auto;
+}
+.hidden {
+  display: none;
+}
+#popup {
+  width: 50%;
+  background-color: #ffffff;
+  border: 1px solid #000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  text-align: center;
+ 
+}
+.list li #popupButton{
+    border: none;
+    background-color:rgb(250, 235, 215);
+    font-size: 15px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.list li #popupButton :hover{
+    background-color: #ffffff;
+    color: rgb(122, 122, 122);
+    transform: .2s ease-in-out;
+}
+#closeButton{
+    background-color: #ffffff;
+    border-radius: 1px;
+    margin-top: auto;
+    border : black 1px solid;
+}
+
+    </style>
+    <title>Web Dinamis!</title>
+</head>
+<body>
+    <div class="FContainer">
+        <nav class="shop">
+            <div class="logo">
+                <img id="logo" src="image/gm.jpg" height="70px" width="80px" alt="logo">
+            </div>
+            <div class="search">
+                <input type="text" placeholder ="Cari Produk" >
+                <button id="search">Cari</button>
+            </div>
+            <ul class="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tentang.html">About</a></li>
+                <li><a href="Layanan.html">Service</a></li>
+                <li><button id="popupButton">Inbox</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h3>WELCOME FAMS</h3>
+    <h5>Sawadikha, hallo fams, selamat datang ya sobat thaientu<br> jadi disini kami menjual berbagai merchendise aktor aktor thailand loh<br> barang nya narak mak leui kha yakin ga mau beli nih ?<br> di kita barang barangnya juga murah loh, pengiriman nya juga ceffah nih.<br> selain itu kami juga menjual barang barang lain loh ayo di check dulu kakak hehe </h5>
+    <br>
+    <h5>hallo kak, kami open po untuk pembelian album atau pun titipan jajanan thailandnya ya kak,<br> disini kami menjual berbagai macam jenis merchendise</h5>
+    <footer>
+        <div class="container">
+          <p>&copy; Amanda Yayuri-oktober-2023.</p>
+        </div>
+      </footer>
+
+
+
+<div id="popup" class="hidden">
+        <p>Anda Tidak Memiliki Pesan.</p>
+            <button id="closeButton">Tutup</button>
+</div>
+    
+      <script>
+        const popupButton = document.getElementById('popupButton');
+    const popup = document.getElementById('popup');
+    const closeButton = document.getElementById('closeButton');
+    
+    popupButton.addEventListener('click', () => {
+      popup.classList.remove('hidden');
+    });
+    
+    closeButton.addEventListener('click', () => {
+      popup.classList.add('hidden');
+    });
+    
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
